@@ -15,4 +15,13 @@ const TodoInput = ({ value, onChange, onInsert }) => {
       onInsert()
     }
   }
+
+  return (
+    <div className={cx('todo-input')}>
+      <input onChange={onChange} value={value} onKeyPress={handleKeyPress} />
+      <div className={cx('add-button')} onClick={onInsert}>추가</div>
+    </div>
+  )
 }
+
+export default TodoInput
