@@ -8,7 +8,7 @@ import modules from './module'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 
-const store = createStore(modules, window.devToolsExtension && window.devToolsExtention())
+const store = createStore(modules, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
 ReactDOM.render(
   <Provider store={store}>
